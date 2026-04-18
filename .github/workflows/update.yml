@@ -1,0 +1,73 @@
+name: 鸭口选股 V4 - 自动更新
+
+on:
+  schedule:
+    # 周一至周五 北京时间 16:30（UTC 08:30）运行
+    - cron: '30 8 * * 1-5'
+  workflow_dispatch:
+    # 支持手动触发
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  run-strategy:
+    runs-on: ubuntu-latest
+    # 三周期鸭口 + 六大指标，每只股票 3 次请求，给足时间
+    timeout-minutes: 360
+
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 设置 Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: 安装依赖
+        run: pip install -r requirements.txt
+
+      - name: 运行选股策略
+        run: python strategy.py
+
+      - name: 提交结果到仓库
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/
+          if git diff --cached --quiet; then
+            echo "无变更，跳过提交"
+          else
+            git commit -m "chore: 自动更新选股结果 $(date +'%Y-%m-%d %H:%M')"
+            git pull --rebase origin main || true
+            git push --force-with-lease
+          fi
+
+  deploy:
+    needs: run-strategy
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: 检出主分支代码
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: 配置 GitHub Pages
+        uses: actions/configure-pages@v4
+
+      - name: 上传 docs/ 为 Pages 产物
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs/
+
+      - name: 部署到 GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
