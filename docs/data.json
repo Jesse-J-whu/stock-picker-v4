@@ -1,5 +1,5 @@
 {
-  "update_time": "2026-04-30 11:32:52",
+  "update_time": "2026-05-01 11:12:31",
   "strategy": "鸭口选股 V4",
   "conditions": {
     "BOLL_NOW": "当前日线/周线/月线同时处于 BOLL 开口扩张（鸭口）状态",
