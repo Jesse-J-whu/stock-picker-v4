@@ -1,5 +1,5 @@
 {
-  "update_time": "2026-07-13 11:25:30",
+  "update_time": "2026-07-14 09:55:01",
   "strategy": "鸭口选股 V4",
   "conditions": {
     "BOLL_NOW": "当前日线/周线/月线同时处于 BOLL 开口扩张（鸭口）状态",
@@ -43,12 +43,12 @@
         "AMO": "✓",
         "KDJ": "月✓ 周✓ 日✓"
       },
-      "price": 12.3,
-      "change_pct": 20.0,
-      "volume": 63600.0,
-      "high": 12.3,
-      "low": 12.3,
-      "open": 12.3
+      "price": 13.4,
+      "change_pct": 8.94,
+      "volume": 935567.0,
+      "high": 13.97,
+      "low": 10.82,
+      "open": 13.12
     }
   ]
 }
