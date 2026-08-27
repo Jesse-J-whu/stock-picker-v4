@@ -28,11 +28,21 @@ jobs:
           python-version: '3.11'
           cache: 'pip'
 
+      - name: 恢复行情数据缓存
+        uses: actions/cache@v4
+        with:
+          path: .cache/
+          key: tushare-daily-${{ runner.os }}-${{ github.run_id }}
+          restore-keys: |
+            tushare-daily-${{ runner.os }}-
+
       - name: 安装依赖
         run: pip install -r requirements.txt
 
       - name: 运行选股策略
         run: python strategy.py
+        env:
+          TUSHARE_TOKEN: ${{ secrets.TUSHARE_TOKEN }}
 
       - name: 提交结果到仓库
         run: |
