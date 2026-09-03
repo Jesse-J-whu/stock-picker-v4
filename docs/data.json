@@ -1,5 +1,5 @@
 {
-  "update_time": "2026-09-02 13:01:52",
+  "update_time": "2026-09-03 13:05:16",
   "strategy": "鸭口选股 V4",
   "conditions": {
     "BOLL_NOW": "当前日线/周线/月线同时处于 BOLL 开口扩张（鸭口）状态",
@@ -13,8 +13,8 @@
   "count": 2,
   "stocks": [
     {
-      "code": "600722",
-      "name": "金牛化工",
+      "code": "002536",
+      "name": "飞龙股份",
       "detail": {
         "BOLL_NOW": "月✓ 周✓ 日✓",
         "BOLL": "月✓ 周✓ 日✓",
@@ -24,17 +24,17 @@
         "AMO": "✓",
         "KDJ": "月✓ 周✓ 日✓"
       },
-      "price": 19.26,
-      "change_pct": 6.64,
-      "volume": 1822742.46,
-      "turnover": 3389343.085,
-      "high": 19.86,
-      "low": 17.58,
-      "open": 18.57
+      "price": 63.03,
+      "change_pct": 8.54,
+      "volume": 915775.49,
+      "turnover": 5605989.27261,
+      "high": 63.88,
+      "low": 57.42,
+      "open": 58.0
     },
     {
-      "code": "603339",
-      "name": "四方科技",
+      "code": "603976",
+      "name": "正川股份",
       "detail": {
         "BOLL_NOW": "月✓ 周✓ 日✓",
         "BOLL": "月✓ 周✓ 日✓",
@@ -44,13 +44,13 @@
         "AMO": "✓",
         "KDJ": "月✓ 周✓ 日✓"
       },
-      "price": 15.46,
-      "change_pct": -3.86,
-      "volume": 312552.88,
-      "turnover": 484574.367,
-      "high": 16.08,
-      "low": 15.32,
-      "open": 16.05
+      "price": 34.45,
+      "change_pct": 6.16,
+      "volume": 93716.35,
+      "turnover": 321600.0,
+      "high": 34.99,
+      "low": 32.46,
+      "open": 32.46
     }
   ]
 }
