@@ -1,5 +1,5 @@
 {
-  "update_time": "2026-09-03 13:05:16",
+  "update_time": "2026-09-04 12:58:54",
   "strategy": "鸭口选股 V4",
   "conditions": {
     "BOLL_NOW": "当前日线/周线/月线同时处于 BOLL 开口扩张（鸭口）状态",
@@ -13,8 +13,8 @@
   "count": 2,
   "stocks": [
     {
-      "code": "002536",
-      "name": "飞龙股份",
+      "code": "002631",
+      "name": "德尔未来",
       "detail": {
         "BOLL_NOW": "月✓ 周✓ 日✓",
         "BOLL": "月✓ 周✓ 日✓",
@@ -24,13 +24,13 @@
         "AMO": "✓",
         "KDJ": "月✓ 周✓ 日✓"
       },
-      "price": 63.03,
-      "change_pct": 8.54,
-      "volume": 915775.49,
-      "turnover": 5605989.27261,
-      "high": 63.88,
-      "low": 57.42,
-      "open": 58.0
+      "price": 11.01,
+      "change_pct": -1.17,
+      "volume": 484979.51,
+      "turnover": 543101.02859,
+      "high": 11.5,
+      "low": 10.89,
+      "open": 11.1
     },
     {
       "code": "603976",
@@ -44,13 +44,13 @@
         "AMO": "✓",
         "KDJ": "月✓ 周✓ 日✓"
       },
-      "price": 34.45,
-      "change_pct": 6.16,
-      "volume": 93716.35,
-      "turnover": 321600.0,
-      "high": 34.99,
-      "low": 32.46,
-      "open": 32.46
+      "price": 35.82,
+      "change_pct": 3.98,
+      "volume": 100977.79,
+      "turnover": 357647.093,
+      "high": 35.99,
+      "low": 34.21,
+      "open": 34.45
     }
   ]
 }
