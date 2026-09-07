@@ -921,6 +921,8 @@ def save_data_json(selected_stocks, output_path):
             'AMO':      '周52≥3x & 周26≥1.5x & 日22≥1.5x',
             'KDJ':      'J穿K穿D三线金叉 月24/周26/日22',
         },
+        'adjustment': 'qfq',
+        'data_source': 'Tushare',
         'count': len(selected_stocks),
         'stocks': selected_stocks,
     }

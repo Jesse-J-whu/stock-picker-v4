@@ -6,6 +6,7 @@ from datetime import date, timedelta
 
 import pandas as pd
 import requests
+from adjustment import load_factors, adjust_bars
 
 
 API_URL = "https://api.tushare.pro"
@@ -94,6 +95,7 @@ class TushareMarketData:
         self.daily = self.daily.drop_duplicates(["ts_code", "trade_date"], keep="last")
         self.daily = self.daily.sort_values(["ts_code", "trade_date"]).reset_index(drop=True)
         self._save_cache(self.daily)
+        self.daily = load_factors(self)
         self.stocks = self._load_stocks_cache()
         if self.stocks.empty:
             # stock_basic 有每小时频次限制；它只用于展示名称，不能阻断行情筛选。
@@ -128,12 +130,13 @@ class TushareMarketData:
             return bars
         bars["date"] = pd.to_datetime(bars["trade_date"])
         bars = bars.sort_values("date")
-        return bars[["date", "open", "close", "high", "low", "vol", "amount", "pre_close"]].reset_index(drop=True)
+        return bars[["date", "open", "close", "high", "low", "vol", "amount", "pre_close", "adj_factor"]].reset_index(drop=True)
 
     def bars(self, stock_code, period, count):
         bars = self.daily_bars(stock_code)
         if bars.empty:
             return bars
+        bars = adjust_bars(bars)
         if period == "day":
             result = bars
         else:
