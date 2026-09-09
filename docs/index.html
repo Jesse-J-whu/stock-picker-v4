@@ -188,8 +188,8 @@ body {
 <div class="header">
     <h1>鸭口选股 V4</h1>
     <div class="meta">
-        <span>2026年09月07日 14:30 更新</span>
-        <span class="count">1 只</span>
+        <span>2026年09月09日 23:55 北京时间更新</span>
+        <span class="count">2 只</span>
     </div>
     <div class="tags">
         <span class="tag tag-v4">★ 当前三周期鸭口</span>
@@ -197,7 +197,7 @@ body {
         <span class="tag tag-macd">MACD 月/周/日</span>
         <span class="tag tag-obv">OBV 月/周/日</span>
         <span class="tag tag-dma">DMA 月/周</span>
-        <span class="tag tag-amo">AMO 周52&amp;26 日22</span>
+        <span class="tag tag-amo">成交量 周52&amp;26 日22</span>
         <span class="tag tag-kdj">KDJ 月/周/日</span>
     </div>
 </div>
@@ -207,10 +207,21 @@ body {
     <span class="v4-highlight">【新增】当前日线/周线/月线同时处于 BOLL 鸭口扩张状态</span>
     + 六大指标全部通过。
     BOLL月/周/日开口扩张；MACD月/周/日金叉持续；OBV月/周/日均在均线上方；
-    DMA月/周 DIF&gt;DIFMA；AMO周52周≥3倍&amp;26周≥1.5倍且日22日≥1.5倍；
+    DMA月/周 DIF&gt;DIFMA；成交量周52周&gt;3倍&amp;26周&gt;1.5倍且日22日&gt;1.5倍；
     KDJ月/周/日 J穿K穿D三线金叉。
 </div>
 
+<div class="disclaimer" id="data-status">
+    行情日期 2026-09-09 · 前复权 · 覆盖 5009/5009 · 已计算 4171 · 历史不足 838 · 沪深当日交易股票（不含北交所/停牌/ST） · 周/月含未结束周期<br>价格：前复权；放量指标：成交量（非成交额）。
+    <br><span id="freshness-warning"></span>
+</div>
+<script>
+const dataDay = "行情日期 2026-09-09 · 前复权 · 覆盖 5009/5009 · 已计算 4171 · 历史不足 838 · 沪深当日交易股票（不含北交所/停牌/ST） · 周/月含未结束周期".match(/\d{4}-\d{2}-\d{2}/);
+if (dataDay && Date.now() - Date.parse(dataDay[0] + "T15:00:00+08:00") > 4*86400000) {
+  document.getElementById("freshness-warning").textContent =
+    "提示：行情日期距今超过4天，可能为休市或任务未更新，请核对运行状态。";
+}
+</script>
 <div class="disclaimer">
     本页面仅为量化策略筛选结果展示，不构成任何投资建议。股市有风险，投资需谨慎。
 </div>
@@ -221,16 +232,16 @@ body {
 <div class="stock-card">
     <div class="card-top">
         <div>
-            <div class="stock-name">正川股份</div>
-            <div class="stock-code">603976</div>
+            <div class="stock-name">华凯易佰</div>
+            <div class="stock-code">300592</div>
         </div>
         <div class="stock-price">
             
-            <div class="price-value down">
-                35.39
+            <div class="price-value up">
+                18.43
             </div>
-            <div class="price-change down">
-                -1.20%
+            <div class="price-change up">
+                +2.39%
             </div>
             
         </div>
@@ -239,15 +250,15 @@ body {
     <div class="card-bottom">
         <div class="metric">
             <div class="metric-label">开盘</div>
-            <div class="metric-value">36.06</div>
+            <div class="metric-value">18.18</div>
         </div>
         <div class="metric">
             <div class="metric-label">最高</div>
-            <div class="metric-value">36.06</div>
+            <div class="metric-value">18.97</div>
         </div>
         <div class="metric">
             <div class="metric-label">最低</div>
-            <div class="metric-value">32.24</div>
+            <div class="metric-value">17.90</div>
         </div>
     </div>
     
@@ -258,7 +269,53 @@ body {
         <span class="sig sig-macd">MACD 月✓ 周✓ 日✓</span>
         <span class="sig sig-obv">OBV 月✓ 周✓ 日✓</span>
         <span class="sig sig-dma">DMA 月✓ 周✓</span>
-        <span class="sig sig-amo">AMO ✓</span>
+        <span class="sig sig-amo">成交量 ✓</span>
+        <span class="sig sig-kdj">KDJ 月✓ 周✓ 日✓</span>
+    </div>
+    
+</div>
+
+<div class="stock-card">
+    <div class="card-top">
+        <div>
+            <div class="stock-name">风语筑</div>
+            <div class="stock-code">603466</div>
+        </div>
+        <div class="stock-price">
+            
+            <div class="price-value up">
+                12.91
+            </div>
+            <div class="price-change up">
+                +2.30%
+            </div>
+            
+        </div>
+    </div>
+    
+    <div class="card-bottom">
+        <div class="metric">
+            <div class="metric-label">开盘</div>
+            <div class="metric-value">12.30</div>
+        </div>
+        <div class="metric">
+            <div class="metric-label">最高</div>
+            <div class="metric-value">12.97</div>
+        </div>
+        <div class="metric">
+            <div class="metric-label">最低</div>
+            <div class="metric-value">11.68</div>
+        </div>
+    </div>
+    
+    
+    <div class="signal-row">
+        <span class="sig sig-v4">鸭口NOW 月✓ 周✓ 日✓</span>
+        <span class="sig sig-boll">BOLL 月✓ 周✓ 日✓</span>
+        <span class="sig sig-macd">MACD 月✓ 周✓ 日✓</span>
+        <span class="sig sig-obv">OBV 月✓ 周✓ 日✓</span>
+        <span class="sig sig-dma">DMA 月✓ 周✓</span>
+        <span class="sig sig-amo">成交量 ✓</span>
         <span class="sig sig-kdj">KDJ 月✓ 周✓ 日✓</span>
     </div>
     
