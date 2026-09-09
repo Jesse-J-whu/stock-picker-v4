@@ -53,7 +53,8 @@ import requests
 from datetime import datetime, timedelta
 from jinja2 import Template
 import time
-from market_data import MarketDataError, TushareMarketData
+from market_data import MarketDataError
+from qfq_data import AkshareMarketData, SOURCE, beijing_now
 
 # ============================================================
 # HTTP 基础设施
@@ -256,8 +257,8 @@ MARKET_DATA = None
 
 def prepare_market_data():
     global MARKET_DATA
-    print("[1/4] 同步 Tushare 全市场行情...")
-    MARKET_DATA = TushareMarketData().load()
+    print("[1/4] 同步并校验 AKShare 前复权行情...")
+    MARKET_DATA = AkshareMarketData().load()
 
 
 def get_all_a_stocks():
@@ -538,7 +539,7 @@ def apply_strategy_detail(df_month, df_week, df_day):
 # 主流程
 # ============================================================
 
-MIN_MONTH = 30
+MIN_MONTH = 59  # MA50 followed by MA10 requires 59 monthly bars.
 MIN_WEEK  = 60
 MIN_DAY   = 60
 
@@ -578,10 +579,12 @@ def run_strategy():
                 df_week.empty  or len(df_week)  < MIN_WEEK  or
                 df_day.empty   or len(df_day)   < MIN_DAY):
             failed += 1
+            MARKET_DATA.stats["insufficient_history"] += 1
             continue
 
         try:
             hit = apply_strategy(df_month, df_week, df_day)
+            MARKET_DATA.stats["evaluated"] += 1
             if hit:
                 detail = apply_strategy_detail(df_month, df_week, df_day)
                 selected.append({
@@ -591,8 +594,8 @@ def run_strategy():
                 })
                 print(f"  ★ 选中: {code} {name}")
         except Exception as e:
-            failed += 1
-            continue
+            MARKET_DATA.stats["errors"] += 1
+            raise MarketDataError(f"策略计算异常 {code}，禁止发布") from e
 
     print(f"\n  策略计算完成: 成功 {total - failed}, 失败 {failed}")
 
@@ -811,7 +814,7 @@ body {
         <span class="tag tag-macd">MACD 月/周/日</span>
         <span class="tag tag-obv">OBV 月/周/日</span>
         <span class="tag tag-dma">DMA 月/周</span>
-        <span class="tag tag-amo">AMO 周52&amp;26 日22</span>
+        <span class="tag tag-amo">成交量 周52&amp;26 日22</span>
         <span class="tag tag-kdj">KDJ 月/周/日</span>
     </div>
 </div>
@@ -821,10 +824,21 @@ body {
     <span class="v4-highlight">【新增】当前日线/周线/月线同时处于 BOLL 鸭口扩张状态</span>
     + 六大指标全部通过。
     BOLL月/周/日开口扩张；MACD月/周/日金叉持续；OBV月/周/日均在均线上方；
-    DMA月/周 DIF&gt;DIFMA；AMO周52周≥3倍&amp;26周≥1.5倍且日22日≥1.5倍；
+    DMA月/周 DIF&gt;DIFMA；成交量周52周&gt;3倍&amp;26周&gt;1.5倍且日22日&gt;1.5倍；
     KDJ月/周/日 J穿K穿D三线金叉。
 </div>
 
+<div class="disclaimer" id="data-status">
+    {{ data_status }}<br>价格：前复权；放量指标：成交量（非成交额）。
+    <br><span id="freshness-warning"></span>
+</div>
+<script>
+const dataDay = "{{ data_status }}".match(/\d{4}-\d{2}-\d{2}/);
+if (dataDay && Date.now() - Date.parse(dataDay[0] + "T15:00:00+08:00") > 4*86400000) {
+  document.getElementById("freshness-warning").textContent =
+    "提示：行情日期距今超过4天，可能为休市或任务未更新，请核对运行状态。";
+}
+</script>
 <div class="disclaimer">
     本页面仅为量化策略筛选结果展示，不构成任何投资建议。股市有风险，投资需谨慎。
 </div>
@@ -874,7 +888,7 @@ body {
         <span class="sig sig-macd">MACD {{ s.detail.MACD }}</span>
         <span class="sig sig-obv">OBV {{ s.detail.OBV }}</span>
         <span class="sig sig-dma">DMA {{ s.detail.DMA }}</span>
-        <span class="sig sig-amo">AMO {{ s.detail.AMO }}</span>
+        <span class="sig sig-amo">成交量 {{ s.detail.AMO }}</span>
         <span class="sig sig-kdj">KDJ {{ s.detail.KDJ }}</span>
     </div>
     {% endif %}
@@ -899,7 +913,8 @@ body {
     html = template.render(
         stocks=selected_stocks,
         stock_count=len(selected_stocks),
-        update_time=datetime.now().strftime('%Y年%m月%d日 %H:%M 更新'),
+        update_time=beijing_now().strftime('%Y年%m月%d日 %H:%M 北京时间更新'),
+        data_status=MARKET_DATA.page_status(),
     )
     os.makedirs(os.path.dirname(output_path) if os.path.dirname(output_path) else '.', exist_ok=True)
     with open(output_path, 'w', encoding='utf-8') as f:
@@ -910,7 +925,10 @@ body {
 def save_data_json(selected_stocks, output_path):
     """保存选股结果为 JSON"""
     data = {
-        'update_time': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+        'update_time': beijing_now().strftime('%Y-%m-%d %H:%M:%S'),
+        'timezone': 'Asia/Shanghai',
+        'trade_date': MARKET_DATA.trade_date,
+        'data_quality': MARKET_DATA.metadata(),
         'strategy': '鸭口选股 V4',
         'conditions': {
             'BOLL_NOW': '当前日线/周线/月线同时处于 BOLL 开口扩张（鸭口）状态',
@@ -918,11 +936,11 @@ def save_data_json(selected_stocks, output_path):
             'MACD':     '月12/周26(零上)/日22 金叉后DIF持续>=DEA',
             'OBV':      'OBV>MA(OBV,20) 月/周/日',
             'DMA':      'DIF_DMA>DIFMA 月/周',
-            'AMO':      '周52≥3x & 周26≥1.5x & 日22≥1.5x',
+            'AMO':      '成交量（非成交额）：周52>3x & 周26>1.5x & 日22>1.5x',
             'KDJ':      'J穿K穿D三线金叉 月24/周26/日22',
         },
         'adjustment': 'qfq',
-        'data_source': 'Tushare',
+        'data_source': SOURCE,
         'count': len(selected_stocks),
         'stocks': selected_stocks,
     }
