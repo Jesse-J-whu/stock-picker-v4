@@ -1,7 +1,7 @@
 {
-  "update_time": "2026-09-15 16:11:39",
+  "update_time": "2026-09-16 16:11:52",
   "timezone": "Asia/Shanghai",
-  "trade_date": "2026-09-15",
+  "trade_date": "2026-09-16",
   "data_quality": {
     "price_adjustment": "qfq",
     "volume_basis": "unadjusted shares/hand",
@@ -9,20 +9,20 @@
     "source": "腾讯前复权（全量加速抓取）；Tushare当日日线校验",
     "fetch_errors": [],
     "short_history": 0,
-    "trade_date": "2026-09-15",
-    "reference_rows": 5548,
-    "sh_sz_trading_rows": 5205,
+    "trade_date": "2026-09-16",
+    "reference_rows": 5550,
+    "sh_sz_trading_rows": 5206,
     "excluded_risk_names": 197,
-    "universe": 5008,
-    "valid_histories": 5008,
-    "elapsed_seconds": 560,
+    "universe": 5009,
+    "valid_histories": 5009,
+    "elapsed_seconds": 565,
     "coverage": 1.0,
     "transport": "tencent-native-json-full-window-v1",
     "full_refetch_each_trade_date": true,
     "shared_snapshot": true,
     "strategy_counts": {
       "evaluated": 4169,
-      "insufficient_history": 839,
+      "insufficient_history": 840,
       "errors": 0
     },
     "note": "周/月包含当前未结束周期；成交量不复权；短历史股票单列，不算网络失败"
@@ -39,8 +39,28 @@
   },
   "adjustment": "qfq",
   "data_source": "腾讯前复权（全量加速抓取）；Tushare当日日线校验",
-  "count": 3,
+  "count": 4,
   "stocks": [
+    {
+      "code": "000739",
+      "name": "普洛药业",
+      "detail": {
+        "BOLL_NOW": "月✓ 周✓ 日✓",
+        "BOLL": "月✓ 周✓ 日✓",
+        "MACD": "月✓ 周✓ 日✓",
+        "OBV": "月✓ 周✓ 日✓",
+        "DMA": "月✓ 周✓",
+        "AMO": "✓",
+        "KDJ": "月✓ 周✓ 日✓"
+      },
+      "price": 22.59,
+      "change_pct": 0.98,
+      "volume": 96155.12,
+      "turnover": 217306.94016,
+      "open": 22.32,
+      "high": 22.99,
+      "low": 22.2
+    },
     {
       "code": "002913",
       "name": "奥士康",
@@ -53,17 +73,17 @@
         "AMO": "✓",
         "KDJ": "月✓ 周✓ 日✓"
       },
-      "price": 75.55,
-      "change_pct": -1.29,
-      "volume": 135382.48,
-      "turnover": 1016760.54762,
-      "open": 75.5,
-      "high": 77.21,
-      "low": 72.91
+      "price": 83.11,
+      "change_pct": 10.01,
+      "volume": 104633.65,
+      "turnover": 838634.65197,
+      "open": 77.15,
+      "high": 83.11,
+      "low": 76.2
     },
     {
-      "code": "300311",
-      "name": "任子行",
+      "code": "300592",
+      "name": "华凯易佰",
       "detail": {
         "BOLL_NOW": "月✓ 周✓ 日✓",
         "BOLL": "月✓ 周✓ 日✓",
@@ -73,17 +93,17 @@
         "AMO": "✓",
         "KDJ": "月✓ 周✓ 日✓"
       },
-      "price": 6.04,
-      "change_pct": -4.43,
-      "volume": 1140318.26,
-      "turnover": 715025.7268,
-      "open": 6.5,
-      "high": 6.64,
-      "low": 6.03
+      "price": 20.35,
+      "change_pct": 1.75,
+      "volume": 125840.83,
+      "turnover": 253865.23526,
+      "open": 19.92,
+      "high": 20.48,
+      "low": 19.75
     },
     {
-      "code": "600228",
-      "name": "返利科技",
+      "code": "600488",
+      "name": "津药药业",
       "detail": {
         "BOLL_NOW": "月✓ 周✓ 日✓",
         "BOLL": "月✓ 周✓ 日✓",
@@ -93,13 +113,13 @@
         "AMO": "✓",
         "KDJ": "月✓ 周✓ 日✓"
       },
-      "price": 11.11,
-      "change_pct": 6.21,
-      "volume": 482706.05,
-      "turnover": 526563.968,
-      "open": 10.76,
-      "high": 11.27,
-      "low": 10.55
+      "price": 6.02,
+      "change_pct": -1.31,
+      "volume": 1536059.5,
+      "turnover": 926653.546,
+      "open": 5.95,
+      "high": 6.12,
+      "low": 5.87
     }
   ]
 }
