@@ -1,7 +1,7 @@
 {
-  "update_time": "2026-09-23 16:11:48",
+  "update_time": "2026-09-24 16:11:43",
   "timezone": "Asia/Shanghai",
-  "trade_date": "2026-09-23",
+  "trade_date": "2026-09-24",
   "data_quality": {
     "price_adjustment": "qfq",
     "volume_basis": "unadjusted shares/hand",
@@ -9,19 +9,19 @@
     "source": "腾讯前复权（全量加速抓取）；Tushare当日日线校验",
     "fetch_errors": [],
     "short_history": 0,
-    "trade_date": "2026-09-23",
-    "reference_rows": 5556,
+    "trade_date": "2026-09-24",
+    "reference_rows": 5557,
     "sh_sz_trading_rows": 5210,
-    "excluded_risk_names": 197,
-    "universe": 5013,
-    "valid_histories": 5013,
-    "elapsed_seconds": 559,
+    "excluded_risk_names": 196,
+    "universe": 5014,
+    "valid_histories": 5014,
+    "elapsed_seconds": 554,
     "coverage": 1.0,
     "transport": "tencent-native-json-full-window-v1",
     "full_refetch_each_trade_date": true,
     "shared_snapshot": true,
     "strategy_counts": {
-      "evaluated": 4170,
+      "evaluated": 4171,
       "insufficient_history": 843,
       "errors": 0
     },
@@ -39,7 +39,7 @@
   },
   "adjustment": "qfq",
   "data_source": "腾讯前复权（全量加速抓取）；Tushare当日日线校验",
-  "count": 7,
+  "count": 5,
   "stocks": [
     {
       "code": "000739",
@@ -53,13 +53,53 @@
         "AMO": "✓",
         "KDJ": "月✓ 周✓ 日✓"
       },
-      "price": 25.32,
-      "change_pct": 5.5,
-      "volume": 196749.14,
-      "turnover": 492558.30438,
-      "open": 24.14,
-      "high": 25.5,
-      "low": 24.06
+      "price": 25.3,
+      "change_pct": -0.08,
+      "volume": 157662.74,
+      "turnover": 399584.52211,
+      "open": 25.13,
+      "high": 25.68,
+      "low": 24.82
+    },
+    {
+      "code": "300599",
+      "name": "雄塑科技",
+      "detail": {
+        "BOLL_NOW": "月✓ 周✓ 日✓",
+        "BOLL": "月✓ 周✓ 日✓",
+        "MACD": "月✓ 周✓ 日✓",
+        "OBV": "月✓ 周✓ 日✓",
+        "DMA": "月✓ 周✓",
+        "AMO": "✓",
+        "KDJ": "月✓ 周✓ 日✓"
+      },
+      "price": 13.69,
+      "change_pct": 10.85,
+      "volume": 257957.48,
+      "turnover": 341931.49643,
+      "open": 12.61,
+      "high": 13.73,
+      "low": 12.61
+    },
+    {
+      "code": "300613",
+      "name": "富瀚微",
+      "detail": {
+        "BOLL_NOW": "月✓ 周✓ 日✓",
+        "BOLL": "月✓ 周✓ 日✓",
+        "MACD": "月✓ 周✓ 日✓",
+        "OBV": "月✓ 周✓ 日✓",
+        "DMA": "月✓ 周✓",
+        "AMO": "✓",
+        "KDJ": "月✓ 周✓ 日✓"
+      },
+      "price": 86.88,
+      "change_pct": 0.33,
+      "volume": 126112.37,
+      "turnover": 1107194.89344,
+      "open": 86.7,
+      "high": 89.88,
+      "low": 86.1
     },
     {
       "code": "300684",
@@ -73,53 +113,13 @@
         "AMO": "✓",
         "KDJ": "月✓ 周✓ 日✓"
       },
-      "price": 119.5,
-      "change_pct": 6.93,
-      "volume": 337111.31,
-      "turnover": 4075894.72968,
-      "open": 114.91,
-      "high": 126.99,
-      "low": 114.5
-    },
-    {
-      "code": "603268",
-      "name": "松发股份",
-      "detail": {
-        "BOLL_NOW": "月✓ 周✓ 日✓",
-        "BOLL": "月✓ 周✓ 日✓",
-        "MACD": "月✓ 周✓ 日✓",
-        "OBV": "月✓ 周✓ 日✓",
-        "DMA": "月✓ 周✓",
-        "AMO": "✓",
-        "KDJ": "月✓ 周✓ 日✓"
-      },
-      "price": 215.32,
-      "change_pct": -1.68,
-      "volume": 54060.0,
-      "turnover": 1176287.313,
-      "open": 219.6,
-      "high": 223.97,
-      "low": 215.0
-    },
-    {
-      "code": "688202",
-      "name": "美迪西",
-      "detail": {
-        "BOLL_NOW": "月✓ 周✓ 日✓",
-        "BOLL": "月✓ 周✓ 日✓",
-        "MACD": "月✓ 周✓ 日✓",
-        "OBV": "月✓ 周✓ 日✓",
-        "DMA": "月✓ 周✓",
-        "AMO": "✓",
-        "KDJ": "月✓ 周✓ 日✓"
-      },
-      "price": 117.08,
-      "change_pct": 6.57,
-      "volume": 78448.96,
-      "turnover": 914378.6,
-      "open": 109.86,
-      "high": 120.0,
-      "low": 108.51
+      "price": 118.62,
+      "change_pct": -0.74,
+      "volume": 222311.39,
+      "turnover": 2669456.42168,
+      "open": 119.41,
+      "high": 123.19,
+      "low": 118.0
     },
     {
       "code": "688222",
@@ -133,53 +133,13 @@
         "AMO": "✓",
         "KDJ": "月✓ 周✓ 日✓"
       },
-      "price": 46.02,
-      "change_pct": 3.65,
-      "volume": 340394.74,
-      "turnover": 1567182.121,
-      "open": 44.48,
-      "high": 47.58,
-      "low": 43.51
-    },
-    {
-      "code": "688655",
-      "name": "迅捷兴",
-      "detail": {
-        "BOLL_NOW": "月✓ 周✓ 日✓",
-        "BOLL": "月✓ 周✓ 日✓",
-        "MACD": "月✓ 周✓ 日✓",
-        "OBV": "月✓ 周✓ 日✓",
-        "DMA": "月✓ 周✓",
-        "AMO": "✓",
-        "KDJ": "月✓ 周✓ 日✓"
-      },
-      "price": 78.15,
-      "change_pct": 1.22,
-      "volume": 127159.86,
-      "turnover": 991928.996,
-      "open": 77.58,
-      "high": 80.78,
-      "low": 76.1
-    },
-    {
-      "code": "688690",
-      "name": "纳微科技",
-      "detail": {
-        "BOLL_NOW": "月✓ 周✓ 日✓",
-        "BOLL": "月✓ 周✓ 日✓",
-        "MACD": "月✓ 周✓ 日✓",
-        "OBV": "月✓ 周✓ 日✓",
-        "DMA": "月✓ 周✓",
-        "AMO": "✓",
-        "KDJ": "月✓ 周✓ 日✓"
-      },
-      "price": 49.21,
-      "change_pct": 2.8,
-      "volume": 128170.17,
-      "turnover": 633002.724,
-      "open": 47.6,
-      "high": 50.26,
-      "low": 47.6
+      "price": 44.19,
+      "change_pct": -3.98,
+      "volume": 230897.87,
+      "turnover": 1037792.188,
+      "open": 45.55,
+      "high": 46.3,
+      "low": 44.19
     }
   ]
 }
