@@ -1,7 +1,7 @@
 {
-  "update_time": "2026-09-28 16:11:50",
+  "update_time": "2026-09-29 16:11:40",
   "timezone": "Asia/Shanghai",
-  "trade_date": "2026-09-28",
+  "trade_date": "2026-09-29",
   "data_quality": {
     "price_adjustment": "qfq",
     "volume_basis": "unadjusted shares/hand",
@@ -9,20 +9,20 @@
     "source": "腾讯前复权（全量加速抓取）；Tushare当日日线校验",
     "fetch_errors": [],
     "short_history": 0,
-    "trade_date": "2026-09-28",
-    "reference_rows": 5557,
-    "sh_sz_trading_rows": 5210,
-    "excluded_risk_names": 195,
-    "universe": 5015,
-    "valid_histories": 5015,
-    "elapsed_seconds": 561,
+    "trade_date": "2026-09-29",
+    "reference_rows": 5559,
+    "sh_sz_trading_rows": 5211,
+    "excluded_risk_names": 194,
+    "universe": 5017,
+    "valid_histories": 5017,
+    "elapsed_seconds": 554,
     "coverage": 1.0,
     "transport": "tencent-native-json-full-window-v1",
     "full_refetch_each_trade_date": true,
     "shared_snapshot": true,
     "strategy_counts": {
-      "evaluated": 4172,
-      "insufficient_history": 843,
+      "evaluated": 4173,
+      "insufficient_history": 844,
       "errors": 0
     },
     "note": "周/月包含当前未结束周期；成交量不复权；短历史股票单列，不算网络失败"
@@ -39,7 +39,7 @@
   },
   "adjustment": "qfq",
   "data_source": "腾讯前复权（全量加速抓取）；Tushare当日日线校验",
-  "count": 3,
+  "count": 5,
   "stocks": [
     {
       "code": "000739",
@@ -53,17 +53,17 @@
         "AMO": "✓",
         "KDJ": "月✓ 周✓ 日✓"
       },
-      "price": 26.81,
-      "change_pct": 5.97,
-      "volume": 221782.54,
-      "turnover": 585329.08898,
-      "open": 25.3,
-      "high": 27.0,
-      "low": 24.96
+      "price": 26.56,
+      "change_pct": -0.93,
+      "volume": 177670.79,
+      "turnover": 465737.78074,
+      "open": 26.51,
+      "high": 27.29,
+      "low": 25.36
     },
     {
-      "code": "300311",
-      "name": "任子行",
+      "code": "001872",
+      "name": "招商港口",
       "detail": {
         "BOLL_NOW": "月✓ 周✓ 日✓",
         "BOLL": "月✓ 周✓ 日✓",
@@ -73,13 +73,33 @@
         "AMO": "✓",
         "KDJ": "月✓ 周✓ 日✓"
       },
-      "price": 6.21,
-      "change_pct": 6.7,
-      "volume": 1157197.55,
-      "turnover": 705970.36101,
-      "open": 5.91,
-      "high": 6.37,
-      "low": 5.85
+      "price": 24.4,
+      "change_pct": 1.16,
+      "volume": 41044.0,
+      "turnover": 99841.1888,
+      "open": 24.12,
+      "high": 24.66,
+      "low": 23.7
+    },
+    {
+      "code": "002301",
+      "name": "齐心集团",
+      "detail": {
+        "BOLL_NOW": "月✓ 周✓ 日✓",
+        "BOLL": "月✓ 周✓ 日✓",
+        "MACD": "月✓ 周✓ 日✓",
+        "OBV": "月✓ 周✓ 日✓",
+        "DMA": "月✓ 周✓",
+        "AMO": "✓",
+        "KDJ": "月✓ 周✓ 日✓"
+      },
+      "price": 8.82,
+      "change_pct": 4.01,
+      "volume": 312321.15,
+      "turnover": 273806.71918,
+      "open": 8.39,
+      "high": 9.08,
+      "low": 8.39
     },
     {
       "code": "300599",
@@ -93,13 +113,33 @@
         "AMO": "✓",
         "KDJ": "月✓ 周✓ 日✓"
       },
-      "price": 14.74,
-      "change_pct": 7.67,
-      "volume": 392299.21,
-      "turnover": 574921.62033,
-      "open": 13.7,
-      "high": 15.47,
-      "low": 13.57
+      "price": 13.98,
+      "change_pct": -5.16,
+      "volume": 271570.64,
+      "turnover": 383648.82168,
+      "open": 14.6,
+      "high": 14.74,
+      "low": 13.74
+    },
+    {
+      "code": "603116",
+      "name": "红蜻蜓",
+      "detail": {
+        "BOLL_NOW": "月✓ 周✓ 日✓",
+        "BOLL": "月✓ 周✓ 日✓",
+        "MACD": "月✓ 周✓ 日✓",
+        "OBV": "月✓ 周✓ 日✓",
+        "DMA": "月✓ 周✓",
+        "AMO": "✓",
+        "KDJ": "月✓ 周✓ 日✓"
+      },
+      "price": 7.82,
+      "change_pct": 7.71,
+      "volume": 232389.0,
+      "turnover": 176143.767,
+      "open": 7.41,
+      "high": 7.82,
+      "low": 7.15
     }
   ]
 }
