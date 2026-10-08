@@ -1,7 +1,7 @@
 {
-  "update_time": "2026-09-30 16:11:43",
+  "update_time": "2026-10-08 16:11:47",
   "timezone": "Asia/Shanghai",
-  "trade_date": "2026-09-30",
+  "trade_date": "2026-10-08",
   "data_quality": {
     "price_adjustment": "qfq",
     "volume_basis": "unadjusted shares/hand",
@@ -9,20 +9,20 @@
     "source": "腾讯前复权（全量加速抓取）；Tushare当日日线校验",
     "fetch_errors": [],
     "short_history": 0,
-    "trade_date": "2026-09-30",
-    "reference_rows": 5561,
-    "sh_sz_trading_rows": 5213,
+    "trade_date": "2026-10-08",
+    "reference_rows": 5557,
+    "sh_sz_trading_rows": 5209,
     "excluded_risk_names": 195,
-    "universe": 5018,
-    "valid_histories": 5018,
-    "elapsed_seconds": 557,
+    "universe": 5014,
+    "valid_histories": 5014,
+    "elapsed_seconds": 556,
     "coverage": 1.0,
     "transport": "tencent-native-json-full-window-v1",
     "full_refetch_each_trade_date": true,
     "shared_snapshot": true,
     "strategy_counts": {
-      "evaluated": 4172,
-      "insufficient_history": 846,
+      "evaluated": 4213,
+      "insufficient_history": 801,
       "errors": 0
     },
     "note": "周/月包含当前未结束周期；成交量不复权；短历史股票单列，不算网络失败"
@@ -39,11 +39,11 @@
   },
   "adjustment": "qfq",
   "data_source": "腾讯前复权（全量加速抓取）；Tushare当日日线校验",
-  "count": 4,
+  "count": 3,
   "stocks": [
     {
-      "code": "000739",
-      "name": "普洛药业",
+      "code": "001872",
+      "name": "招商港口",
       "detail": {
         "BOLL_NOW": "月✓ 周✓ 日✓",
         "BOLL": "月✓ 周✓ 日✓",
@@ -53,13 +53,13 @@
         "AMO": "✓",
         "KDJ": "月✓ 周✓ 日✓"
       },
-      "price": 27.74,
-      "change_pct": 4.44,
-      "volume": 215798.66,
-      "turnover": 575333.69161,
-      "open": 25.77,
-      "high": 27.89,
-      "low": 25.23
+      "price": 24.61,
+      "change_pct": 1.78,
+      "volume": 34112.8,
+      "turnover": 83795.11055,
+      "open": 24.15,
+      "high": 24.88,
+      "low": 23.95
     },
     {
       "code": "300142",
@@ -73,13 +73,13 @@
         "AMO": "✓",
         "KDJ": "月✓ 周✓ 日✓"
       },
-      "price": 14.23,
-      "change_pct": 5.49,
-      "volume": 1535562.4,
-      "turnover": 2182835.29957,
-      "open": 13.56,
-      "high": 14.5,
-      "low": 13.5
+      "price": 14.08,
+      "change_pct": -1.05,
+      "volume": 1271553.46,
+      "turnover": 1819092.1229,
+      "open": 14.97,
+      "high": 15.0,
+      "low": 13.96
     },
     {
       "code": "300599",
@@ -93,33 +93,13 @@
         "AMO": "✓",
         "KDJ": "月✓ 周✓ 日✓"
       },
-      "price": 14.2,
-      "change_pct": 1.57,
-      "volume": 192359.05,
-      "turnover": 272191.58578,
-      "open": 14.2,
-      "high": 14.4,
-      "low": 13.78
-    },
-    {
-      "code": "603980",
-      "name": "吉华集团",
-      "detail": {
-        "BOLL_NOW": "月✓ 周✓ 日✓",
-        "BOLL": "月✓ 周✓ 日✓",
-        "MACD": "月✓ 周✓ 日✓",
-        "OBV": "月✓ 周✓ 日✓",
-        "DMA": "月✓ 周✓",
-        "AMO": "✓",
-        "KDJ": "月✓ 周✓ 日✓"
-      },
-      "price": 9.06,
-      "change_pct": 2.49,
-      "volume": 661267.33,
-      "turnover": 592323.725,
-      "open": 8.79,
-      "high": 9.18,
-      "low": 8.71
+      "price": 15.58,
+      "change_pct": 9.72,
+      "volume": 323483.0,
+      "turnover": 499214.232,
+      "open": 14.48,
+      "high": 15.98,
+      "low": 14.34
     }
   ]
 }
