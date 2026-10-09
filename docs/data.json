@@ -1,27 +1,29 @@
 {
-  "update_time": "2026-10-08 16:11:47",
+  "update_time": "2026-10-09 16:11:48",
   "timezone": "Asia/Shanghai",
-  "trade_date": "2026-10-08",
+  "trade_date": "2026-10-09",
   "data_quality": {
     "price_adjustment": "qfq",
     "volume_basis": "unadjusted shares/hand",
     "scope": "当日有成交的沪深A股，排除ST/PT/退市标记；不含北交所及当日停牌",
-    "source": "腾讯前复权（全量加速抓取）；Tushare当日日线校验",
+    "source": "腾讯前复权及流通市值（全量抓取）；Tushare当日日线校验",
     "fetch_errors": [],
     "short_history": 0,
-    "trade_date": "2026-10-08",
-    "reference_rows": 5557,
-    "sh_sz_trading_rows": 5209,
+    "trade_date": "2026-10-09",
+    "reference_rows": 5559,
+    "sh_sz_trading_rows": 5210,
+    "market_cap_rows": 5210,
+    "market_cap_source": "Tencent quote field 44 (circulating market cap, 亿元)",
     "excluded_risk_names": 195,
-    "universe": 5014,
-    "valid_histories": 5014,
-    "elapsed_seconds": 556,
+    "universe": 5015,
+    "valid_histories": 5015,
+    "elapsed_seconds": 559,
     "coverage": 1.0,
     "transport": "tencent-native-json-full-window-v1",
     "full_refetch_each_trade_date": true,
     "shared_snapshot": true,
     "strategy_counts": {
-      "evaluated": 4213,
+      "evaluated": 4214,
       "insufficient_history": 801,
       "errors": 0
     },
@@ -38,8 +40,8 @@
     "KDJ": "J穿K穿D三线金叉 月24/周26/日22"
   },
   "adjustment": "qfq",
-  "data_source": "腾讯前复权（全量加速抓取）；Tushare当日日线校验",
-  "count": 3,
+  "data_source": "腾讯前复权及流通市值（全量抓取）；Tushare当日日线校验",
+  "count": 4,
   "stocks": [
     {
       "code": "001872",
@@ -53,13 +55,13 @@
         "AMO": "✓",
         "KDJ": "月✓ 周✓ 日✓"
       },
-      "price": 24.61,
-      "change_pct": 1.78,
-      "volume": 34112.8,
-      "turnover": 83795.11055,
-      "open": 24.15,
-      "high": 24.88,
-      "low": 23.95
+      "price": 24.63,
+      "change_pct": 0.08,
+      "volume": 32809.59,
+      "turnover": 80282.13644,
+      "open": 24.65,
+      "high": 24.78,
+      "low": 24.2
     },
     {
       "code": "300142",
@@ -73,17 +75,17 @@
         "AMO": "✓",
         "KDJ": "月✓ 周✓ 日✓"
       },
-      "price": 14.08,
-      "change_pct": -1.05,
-      "volume": 1271553.46,
-      "turnover": 1819092.1229,
-      "open": 14.97,
-      "high": 15.0,
-      "low": 13.96
+      "price": 14.75,
+      "change_pct": 4.76,
+      "volume": 1483412.17,
+      "turnover": 2119854.24291,
+      "open": 14.08,
+      "high": 14.87,
+      "low": 13.62
     },
     {
-      "code": "300599",
-      "name": "雄塑科技",
+      "code": "600400",
+      "name": "红豆股份",
       "detail": {
         "BOLL_NOW": "月✓ 周✓ 日✓",
         "BOLL": "月✓ 周✓ 日✓",
@@ -93,13 +95,33 @@
         "AMO": "✓",
         "KDJ": "月✓ 周✓ 日✓"
       },
-      "price": 15.58,
-      "change_pct": 9.72,
-      "volume": 323483.0,
-      "turnover": 499214.232,
-      "open": 14.48,
-      "high": 15.98,
-      "low": 14.34
+      "price": 3.98,
+      "change_pct": 9.94,
+      "volume": 1949690.93,
+      "turnover": 744163.051,
+      "open": 3.7,
+      "high": 3.98,
+      "low": 3.64
+    },
+    {
+      "code": "603727",
+      "name": "博迈科",
+      "detail": {
+        "BOLL_NOW": "月✓ 周✓ 日✓",
+        "BOLL": "月✓ 周✓ 日✓",
+        "MACD": "月✓ 周✓ 日✓",
+        "OBV": "月✓ 周✓ 日✓",
+        "DMA": "月✓ 周✓",
+        "AMO": "✓",
+        "KDJ": "月✓ 周✓ 日✓"
+      },
+      "price": 20.93,
+      "change_pct": 3.36,
+      "volume": 138600.23,
+      "turnover": 284673.203,
+      "open": 20.47,
+      "high": 21.08,
+      "low": 19.85
     }
   ]
 }
