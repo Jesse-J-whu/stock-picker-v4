@@ -1,7 +1,7 @@
 {
-  "update_time": "2026-10-28 16:11:50",
+  "update_time": "2026-10-29 16:11:54",
   "timezone": "Asia/Shanghai",
-  "trade_date": "2026-10-28",
+  "trade_date": "2026-10-29",
   "data_quality": {
     "price_adjustment": "qfq",
     "volume_basis": "unadjusted shares/hand",
@@ -9,15 +9,15 @@
     "source": "腾讯前复权及流通市值（全量抓取）；Tushare当日日线校验",
     "fetch_errors": [],
     "short_history": 0,
-    "trade_date": "2026-10-28",
+    "trade_date": "2026-10-29",
     "reference_rows": 5570,
-    "sh_sz_trading_rows": 5217,
-    "market_cap_rows": 5217,
+    "sh_sz_trading_rows": 5216,
+    "market_cap_rows": 5216,
     "market_cap_source": "Tencent quote field 44 (circulating market cap, 亿元)",
-    "excluded_risk_names": 193,
+    "excluded_risk_names": 192,
     "universe": 5024,
     "valid_histories": 5024,
-    "elapsed_seconds": 564,
+    "elapsed_seconds": 567,
     "coverage": 1.0,
     "transport": "tencent-native-json-full-window-v1",
     "full_refetch_each_trade_date": true,
@@ -41,27 +41,6 @@
   },
   "adjustment": "qfq",
   "data_source": "腾讯前复权及流通市值（全量抓取）；Tushare当日日线校验",
-  "count": 1,
-  "stocks": [
-    {
-      "code": "603466",
-      "name": "风语筑",
-      "detail": {
-        "BOLL_NOW": "月✓ 周✓ 日✓",
-        "BOLL": "月✓ 周✓ 日✓",
-        "MACD": "月✓ 周✓ 日✓",
-        "OBV": "月✓ 周✓ 日✓",
-        "DMA": "月✓ 周✓",
-        "AMO": "✓",
-        "KDJ": "月✓ 周✓ 日✓"
-      },
-      "price": 14.39,
-      "change_pct": 4.12,
-      "volume": 1218261.0,
-      "turnover": 1773667.87,
-      "open": 14.0,
-      "high": 15.2,
-      "low": 14.0
-    }
-  ]
+  "count": 0,
+  "stocks": []
 }
