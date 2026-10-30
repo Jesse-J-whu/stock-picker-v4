@@ -1,7 +1,7 @@
 {
-  "update_time": "2026-10-29 16:11:54",
+  "update_time": "2026-10-30 16:11:52",
   "timezone": "Asia/Shanghai",
-  "trade_date": "2026-10-29",
+  "trade_date": "2026-10-30",
   "data_quality": {
     "price_adjustment": "qfq",
     "volume_basis": "unadjusted shares/hand",
@@ -9,14 +9,14 @@
     "source": "腾讯前复权及流通市值（全量抓取）；Tushare当日日线校验",
     "fetch_errors": [],
     "short_history": 0,
-    "trade_date": "2026-10-29",
-    "reference_rows": 5570,
-    "sh_sz_trading_rows": 5216,
-    "market_cap_rows": 5216,
+    "trade_date": "2026-10-30",
+    "reference_rows": 5571,
+    "sh_sz_trading_rows": 5217,
+    "market_cap_rows": 5217,
     "market_cap_source": "Tencent quote field 44 (circulating market cap, 亿元)",
     "excluded_risk_names": 192,
-    "universe": 5024,
-    "valid_histories": 5024,
+    "universe": 5025,
+    "valid_histories": 5025,
     "elapsed_seconds": 567,
     "coverage": 1.0,
     "transport": "tencent-native-json-full-window-v1",
@@ -24,7 +24,7 @@
     "shared_snapshot": true,
     "strategy_counts": {
       "evaluated": 4221,
-      "insufficient_history": 803,
+      "insufficient_history": 804,
       "errors": 0
     },
     "note": "周/月包含当前未结束周期；成交量不复权；短历史股票单列，不算网络失败"
