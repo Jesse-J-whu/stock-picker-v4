@@ -1,7 +1,7 @@
 {
-  "update_time": "2026-11-10 16:11:26",
+  "update_time": "2026-11-11 16:11:19",
   "timezone": "Asia/Shanghai",
-  "trade_date": "2026-11-10",
+  "trade_date": "2026-11-11",
   "data_quality": {
     "price_adjustment": "qfq",
     "volume_basis": "unadjusted shares/hand",
@@ -9,22 +9,22 @@
     "source": "腾讯前复权及流通市值（全量抓取）；Tushare当日日线校验",
     "fetch_errors": [],
     "short_history": 0,
-    "trade_date": "2026-11-10",
-    "reference_rows": 5573,
-    "sh_sz_trading_rows": 5218,
-    "market_cap_rows": 5218,
+    "trade_date": "2026-11-11",
+    "reference_rows": 5574,
+    "sh_sz_trading_rows": 5219,
+    "market_cap_rows": 5219,
     "market_cap_source": "Tencent quote field 44 (circulating market cap, 亿元)",
     "excluded_risk_names": 191,
-    "universe": 5027,
-    "valid_histories": 5027,
-    "elapsed_seconds": 548,
+    "universe": 5028,
+    "valid_histories": 5028,
+    "elapsed_seconds": 542,
     "coverage": 1.0,
     "transport": "tencent-native-json-full-window-v1",
     "full_refetch_each_trade_date": true,
     "shared_snapshot": true,
     "strategy_counts": {
       "evaluated": 4249,
-      "insufficient_history": 778,
+      "insufficient_history": 779,
       "errors": 0
     },
     "note": "周/月包含当前未结束周期；成交量不复权；短历史股票单列，不算网络失败"
@@ -55,13 +55,13 @@
         "AMO": "✓",
         "KDJ": "月✓ 周✓ 日✓"
       },
-      "price": 6.06,
-      "change_pct": 9.98,
-      "volume": 3350264.88,
-      "turnover": 1921741.05652,
-      "open": 5.77,
-      "high": 6.06,
-      "low": 5.51
+      "price": 6.08,
+      "change_pct": 0.33,
+      "volume": 2972532.72,
+      "turnover": 1826483.88834,
+      "open": 6.27,
+      "high": 6.36,
+      "low": 5.98
     },
     {
       "code": "603466",
@@ -75,13 +75,13 @@
         "AMO": "✓",
         "KDJ": "月✓ 周✓ 日✓"
       },
-      "price": 15.33,
-      "change_pct": 9.97,
-      "volume": 854264.41,
-      "turnover": 1267469.701,
-      "open": 14.13,
-      "high": 15.33,
-      "low": 13.97
+      "price": 16.86,
+      "change_pct": 9.98,
+      "volume": 1247471.0,
+      "turnover": 2034566.763,
+      "open": 15.77,
+      "high": 16.86,
+      "low": 15.4
     }
   ]
 }
