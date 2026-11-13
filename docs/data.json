@@ -1,7 +1,7 @@
 {
-  "update_time": "2026-11-12 16:11:20",
+  "update_time": "2026-11-13 16:11:17",
   "timezone": "Asia/Shanghai",
-  "trade_date": "2026-11-12",
+  "trade_date": "2026-11-13",
   "data_quality": {
     "price_adjustment": "qfq",
     "volume_basis": "unadjusted shares/hand",
@@ -9,21 +9,21 @@
     "source": "腾讯前复权及流通市值（全量抓取）；Tushare当日日线校验",
     "fetch_errors": [],
     "short_history": 0,
-    "trade_date": "2026-11-12",
-    "reference_rows": 5573,
-    "sh_sz_trading_rows": 5218,
-    "market_cap_rows": 5218,
+    "trade_date": "2026-11-13",
+    "reference_rows": 5571,
+    "sh_sz_trading_rows": 5216,
+    "market_cap_rows": 5216,
     "market_cap_source": "Tencent quote field 44 (circulating market cap, 亿元)",
-    "excluded_risk_names": 191,
-    "universe": 5027,
-    "valid_histories": 5027,
-    "elapsed_seconds": 546,
+    "excluded_risk_names": 190,
+    "universe": 5026,
+    "valid_histories": 5026,
+    "elapsed_seconds": 542,
     "coverage": 1.0,
     "transport": "tencent-native-json-full-window-v1",
     "full_refetch_each_trade_date": true,
     "shared_snapshot": true,
     "strategy_counts": {
-      "evaluated": 4248,
+      "evaluated": 4247,
       "insufficient_history": 779,
       "errors": 0
     },
@@ -41,27 +41,6 @@
   },
   "adjustment": "qfq",
   "data_source": "腾讯前复权及流通市值（全量抓取）；Tushare当日日线校验",
-  "count": 1,
-  "stocks": [
-    {
-      "code": "002578",
-      "name": "闽发铝业",
-      "detail": {
-        "BOLL_NOW": "月✓ 周✓ 日✓",
-        "BOLL": "月✓ 周✓ 日✓",
-        "MACD": "月✓ 周✓ 日✓",
-        "OBV": "月✓ 周✓ 日✓",
-        "DMA": "月✓ 周✓",
-        "AMO": "✓",
-        "KDJ": "月✓ 周✓ 日✓"
-      },
-      "price": 6.04,
-      "change_pct": -0.66,
-      "volume": 2750273.73,
-      "turnover": 1664399.34884,
-      "open": 6.06,
-      "high": 6.19,
-      "low": 5.83
-    }
-  ]
+  "count": 0,
+  "stocks": []
 }
